@@ -1,50 +1,138 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - TusukKoffe</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <div class="login-container">
-        
-        <div class="login-header">
-            <h2>Tusuk<span>Koffe</span>.</h2>
-            <p>Satu tusuk kenikmatan, sejuta inspirasi.</p>
-        </div>
+body {
+    background-color: #121212;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('foto-saya.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        
-        <form action="#" method="POST" class="login-form">
-            <div class="form-group">
-                <label for="username">Email atau Username</label>
-                <input type="text" id="username" name="username" placeholder="contoh@email.com" required>
-            </div>
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 380px;
+}
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
-            </div>
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-            
-            <div class="form-options">
-                <label class="remember-me">
-                    <input type="checkbox" name="remember"> Ingat Saya
-                </label>
-                
-                <a href="#" class="forgot-link">Lupa Password?</a>
-            </div>
+.login-header h2 {
+    color: #1a1a1a;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
-            
-            <button type="submit" class="btn-login">Masuk</button>
-        </form>
+.login-header h2 span {
+    color: #8c6239;
+}
 
-        
-        <div class="login-footer">
-            <p>Belum punya akun? <a href="#" class="register-link">Bikin Akun Baru</a></p>
-        </div>
-    </div>
+.login-header p {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
 
-</body>
-</html>
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #8c6239;
+    box-shadow: 0 0 5px rgba(140, 98, 57, 0.3);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.remember-me {
+    color: #555;
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: #8c6239;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+button.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #8c6239;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button.btn-login:hover {
+    background-color: #6f4e2c;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #555;
+}
+
+.login-footer .register-link {
+    color: #8c6239;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+}
+
+.login-footer .register-link:hover {
+    text-decoration: underline;
+}
